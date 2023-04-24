@@ -1,16 +1,14 @@
 package com.example.practice_0424;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequiredArgsConstructor
 public class MainController {
-
     @GetMapping("/")
-    public String hello() {
-        return "main";
+    @ResponseBody
+    public String showMain() {
+        return "<h1>Hello World</h1>";
     }
-
 }
